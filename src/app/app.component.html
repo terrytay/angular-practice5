@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <h1 *ngIf="count; else alt">
+        {{ count }} swap<span *ngIf="count > 1">s</span>
+      </h1>
+      <ng-template #alt>
+        <h1>No swaps yet.</h1>
+      </ng-template>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-md-offset-2">
+      <app-active-users></app-active-users>
+      <app-inactive-users></app-inactive-users>
+    </div>
+    <!--
+      Optimize this app by adding a UsersService which manages the active and inactive users.
+
+      Also add a CounterService which counts the number of active->inactive and inactive->active actions.
+    -->
+  </div>
+</div>
